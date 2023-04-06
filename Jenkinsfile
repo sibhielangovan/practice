@@ -1,9 +1,20 @@
-node{
-    stage('SCM Checkout'){
-        https://github.com/sibhielangovan/practice.git
+pipeline {
+  agent any
+  stages {
+  stage('Stage 1') {
+      steps {
+        script {
+          echo 'Stage 1'
+        }
+      }
     }
-    stage('Welcome'){
-        print "Build Got triggered, tested"
+  stage('Stage 2') {
+      steps {
+        script {
+          echo 'Stage 2'
+        }
+      }
     }
+  }
 }
 
